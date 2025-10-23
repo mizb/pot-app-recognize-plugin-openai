@@ -7,14 +7,9 @@
   "needs": [
     {
       "key": "model",
-      "display": "模型",
-      "type": "select",
-      "options": {
-        "gpt-4o": "GPT-4o",
-        "gpt-4o-mini": "GPT-4o-Mini",
-        "gpt-4-vision-preview": "GPT-4 Vision Preview"
-      }
-    },
+      "display": "模型名称 (自定义)",
+      "type": "input"
+    }，
     {
       "key": "requestPath",
       "display": "请求路径",
@@ -22,27 +17,12 @@
     },
     {
       "key": "apiKey1",
-      "display": "API Key 1 (主)",
+      "display": "API Key 1",
       "type": "input"
     },
     {
       "key": "apiKey2",
       "display": "API Key 2 (可选)",
-      "type": "input"
-    },
-    {
-      "key": "apiKey3",
-      "display": "API Key 3 (可选)",
-      "type": "input"
-    },
-    {
-      "key": "apiKey4",
-      "display": "API Key 4 (可选)",
-      "type": "input"
-    },
-    {
-      "key": "apiKey5",
-      "display": "API Key 5 (可选)",
       "type": "input"
     },
     {
