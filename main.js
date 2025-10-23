@@ -5,22 +5,22 @@ async function recognize(base64, lang, options) {
     const { config, utils } = options;
     const { tauriFetch: fetch } = utils;
     
-    // 2. 从 config 中解构出所有的 5 个 Key
+    // 2. 从 config 中获取所有 5 个 Key
     let { 
         model = "gpt-4o", 
         apiKey1, apiKey2, apiKey3, apiKey4, apiKey5, 
         requestPath, customPrompt 
     } = config;
 
-    // 3. 构建 Key 数组，并自动过滤掉所有空白、null 或 undefined 的 Key
+    // 3. 构建 Key 数组，并过滤掉所有空白/未填写的 Key
     const apiKeys = [apiKey1, apiKey2, apiKey3, apiKey4, apiKey5]
-                        .filter(key => key && key.trim().length > 0);
+                        。filter(key => key && key.trim().length > 0);
 
     if (apiKeys.length === 0) {
         throw "API Key 未配置。请在设置中至少填写一个 API Key。";
     }
 
-    // 4. 轮询逻辑：选择当前的 Key，并更新索引
+    // 4. 轮询逻辑：在“有效”的 Key 数组中进行轮询
     // (如果索引超出了数组范围，比如用户刚删掉了一个 Key，则重置为 0)
     if (currentKeyIndex >= apiKeys.length) {
         currentKeyIndex = 0; 
