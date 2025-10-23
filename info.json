@@ -21,8 +21,28 @@
       "type": "input"
     },
     {
-      "key": "apiKey",
-      "display": "API Key",
+      "key": "apiKey1",
+      "display": "API Key 1 (主)",
+      "type": "input"
+    },
+    {
+      "key": "apiKey2",
+      "display": "API Key 2 (可选)",
+      "type": "input"
+    },
+    {
+      "key": "apiKey3",
+      "display": "API Key 3 (可选)",
+      "type": "input"
+    },
+    {
+      "key": "apiKey4",
+      "display": "API Key 4 (可选)",
+      "type": "input"
+    },
+    {
+      "key": "apiKey5",
+      "display": "API Key 5 (可选)",
       "type": "input"
     },
     {
